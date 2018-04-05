@@ -1,0 +1,30 @@
+create database sistec;
+
+use database sistec;
+
+create table reg (id int, name varchar(20), mobile varchar(11));
+
+insert into reg values(1,'Vibhanshu','9554044486');
+
+select * from reg;
+
+select * from reg where id='2';
+
+select name from reg;
+
+select name as NAME from reg;
+
+select name from reg order by id desc;
+
+select name from reg where name like '%t';	//Name end with t
+select name from reg where name like 'a%';	//Name start with a
+select name from reg where name like 'a_m_t';	//Name first index is a 3rd index is t 5th index is t
+select name from reg where name like '[!a]%';	//Name not start with a
+select name from reg where name like '[av]%';	//Name either start with a or v
+	
+truncate table reg;	//TO delete table
+
+delete from reg;	//Empty table reg
+delete from reg where id ='2'; 	//delete row which id is 2
+
+update reg set name = 'Vibhanshu'	//set all name field to Vibhanshu
